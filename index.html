@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="main.css">
+<head>
+  <title>ZimbelSite</title>
+</head>
+<body>
+<h1>Zimbelstern Player</h1>
+
+<button class="button" onclick="playZimbelstern()">Start</button>
+<button class="button" onclick="stopZimbelstern()">Stop</button>
+
+<script>
+let zimbel;
+
+function playZimbelstern() {
+  zimbel = new Audio("zimbelstern.mp3");
+  zimbel.loop = true;
+  zimbel.play();
+}
+
+function stopZimbelstern() {
+  if (zimbel) {
+    zimbel.pause();
+    zimbel.currentTime = 0;
+  }
+}
+</script>
+
+</body>
+</html>
